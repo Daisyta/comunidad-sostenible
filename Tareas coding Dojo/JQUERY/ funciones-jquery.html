@@ -131,6 +131,8 @@
               <a href="#" id="btnAttr" class="btn btn-primary m-2">Attr</a>
               <a href="#" id="btnAppr" class="btn btn-primary m-2">Appr</a>
               <a href="#" id="btnVal" class="btn btn-primary m-2">Val</a>
+              <a href="#" id="btntextsetter" class="btn btn-primary m-2">text</a>
+              <a href="#" id="btntextgetter" class="btn btn-primary m-2">text</a>
               <a href="#" id="btntext" class="btn btn-primary m-2">text</a>
           </div>
         </div>
@@ -226,7 +228,18 @@
         $("img").attr("src","https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Star_icon_stylized.svg/512px-Star_icon_stylized.svg.png");
       }); //¿cual es el atributo para texto?
 
-  
+      $("#btntextsetter").hover(function () {  //reemplaza texto cuando cursor pasa por encima (se puede cambiar etiqueta ,id o clase),hover permite hacer 2 funciones
+        $(".card-text4").text("esto reemplaza al texto cuando paso el cursor por encima del boton text"); //en este caso es un setter
+      });  //que diferencia tiene usar .html y .text para reemplazar texto?
+
+      $("#btntextgetter").hover(function () {  //reemplaza texto cuando cursor pasa por encima (se puede cambiar etiqueta ,id o clase),hover permite hacer 2 funciones
+        $(".card-text4").text();
+        alert ("soy un getter") //en este caso es un getter  (getter hace 3 funciones??)
+      });
+
+      //click,hover son fncionalidades que puede hcer el cursor,por eso se colocan al lado de la funcion
+//getter ,funciones getter obtienen algo y las setter establecen un valor
+//getter,usar alert
     </script>
 </body>
 
