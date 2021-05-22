@@ -3,16 +3,15 @@
 //proceso: proceso: obtener todos los numeros desde el 1 al 255 a traves de un for
 //salida : impresion de todos los numeros que cumplan con la condicion del for
 
-function imprimirhasta255(x) {
-    var numeros = 1
-    for (var i = 1; i <= x; i++) {
-        console.log(i);
-        numeros += i;
-    }
-    return numeros;
+function numerosdelarray(min,max){
+    let arr = []; //primero,declarar un array vacio
+    for (var a = min; a <= max; a++){  //hacer loop normal para escanear valores minimo y max)
+        arr.push(a) // agegar valor minimo y maximo a la funcion
 }
-y = imprimirhasta255(255);
-
+  return arr; //retorna el array con el intervalo de maximo y minimo
+}
+    numerosdelarray(1,255); //aqui,uno le puede dar los minimo y maximo.
+    //cuando se usan parametros,la funcion se puede
 
 
 //Consigue pares hasta 1000: Escribe una función que entregue la suma de todos los números pares del 1 al 1000
@@ -165,6 +164,20 @@ for (const numero of array ) { //por cada numero del array
 }
     
 }
+
+
+
+//12-Intercambia Valores: Escribe una función que intercambie el primer y el último valor de cualquier array.
+// La extensión mínima predeterminada del array es 2 (ej: [1,5,10,-2] será [-2,5,10,1]). 
+
+
+
+
+//13-De Número a String: Escribe una función que tome un array de números y reemplace cualquier valor negativo por el string ‘Dojo’. 
+//Por ejemplo, dado el array = [-1,-3,2], tu función devolverá [‘Dojo’,‘Dojo’,2].
+
+
+
 
 
 //por cada llave en el objeto,el objeto en este caso es el array,el in va por indice recorriendo
