@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block contenido %} {% block titulo %} TV SHOW {{id}}{% endblock %}
+<div class="row">
+    <div class="col-6">
+        <h2>TV Show #{{show.id}}</h2> <br>
+        <h2>Título: &nbsp;{{show.title}} </h2>
+        <h4>Network: {{show.network}} </h4><br>
+        <h5>Fecha estreno: {{show.release_date | date:"F j, Y"}}</h5>
+        <h5>Fecha actualización: {{show.updated_at | date:"F j, Y"}}</h5>
+        <h5>Descripcion: {{show.desc}}</h5>
+        <a href="/shows/{{show.id}}/edit">Edit</a>
+        <a href="/shows/{{show.id}}/destroy">Delete</a>
+    </div>
+</div>
+
+{% endblock contenido %}

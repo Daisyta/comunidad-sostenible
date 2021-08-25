@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f847844dd3.js" crossorigin="anonymous"></script>
+    <!-- aqui podemos cambiar el titulo,aplicando un block,lo que esta despues del endblock es como una reseña del titulo de la pagina -->
+    <title>{% block titulo %}{% endblock %} - Programas de TV</title>
+    <!-- zona de estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    {% block estilos %}{% endblock %}
+</head>
+
+<body>
+    {% load static %}
+
+    <!-- si quiero que solo en algunas rutas este este menu,se usa include,como este menu cambiara a veces,es una seccion,ahi se deja
+  lo que cambiara  aveces y para hacer mejor seguimiento,se deja aparte,y se sacará -->
+
+    <!-- {#<h1>AUTOR</h1> autor es lo que va cambiando,no es fijo,entonces se le entrega contexto ,ahora se le entrega un bloque al que se le da un nombre, -->
+<div class="container mt-5">
+    {% block contenido %}{% endblock contenido %}
+
+    </div>
+
+    <!-- zona de javascript -->
+    <script src="{% static 'js/index.js' %}"></script>
+    {% block scripts_propios %}{% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+
+</html>

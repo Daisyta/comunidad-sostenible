@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block contenido %} {% block titulo %} ADD A NEW SHOW {{id}}{% endblock %}
+<!-- como hay que crear un nuev show,apreto create y los datos ingresados crean un nuevo show-->
+
+
+<div class="row">
+    <div class="col-sm-12 col-lg-6">
+
+        <!-- aqui tengo que agregar la ruta post,no la he hecho-->
+        <form action="/shows/create" method="post">
+            <!-- como es un formulario,se redirige a la ruta "/" definida en la funcion index  -->
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="libro_titulo-id" class="form-label">Title</label>
+                <input type="text" class="form-control" id="libro_titulo-id" name="title" required>
+            </div>
+            {% comment %} el name va dentro del parentesis del get () o del post () segun corresponda {% endcomment %}
+            <div class="mb-3">
+                <label for="descripcion-id" class="form-label">Network</label>
+                <input type="text" class="form-control" id="descripcion-id" name="network" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="release_date" class="form-label">Release Date</label>
+                <input type="date" name="release_date" class="form-control" name="release_date" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="descripcion-id" class="form-label">Description</label>
+                <input type="text" class="form-control" id="descripcion-id" name="description" required>
+            </div>
+
+            <!-- en añadir libro, el item libro se puede editar a traves de un contexto post,pero aun no los hago-->
+
+            <button type="submit" class="btn btn-primary d-grid gap-2 col-2 mx-auto ">Create</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+{% endblock contenido %}
+
+<!-- cuando se haga click en create,me debe llevar a un formulario-->
